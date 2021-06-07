@@ -1,9 +1,13 @@
 <template>
-  <div>
+  <div class="flex flex-col h-full">
     <Navbar />
   </div>
-  <router-view />
+  <div class="flex-1">
+    <router-view />
+  </div>
+  <div>
   <Footer />
+  </div>
 </template>
 
 <script>

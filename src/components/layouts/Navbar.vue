@@ -1,6 +1,6 @@
 <template>
-  <nav id="navbar" class="bg-gray-300 sm:px-6 px-4 py-2 sm:py-4 shadow z-10">
-    <div class="flex sm:flex-row flex-col container">
+  <nav id="navbar" class="w-full bg-transparent sm:px-6 px-4 py-2 sm:py-4 shadow z-20 fixed">
+    <div class="flex sm:flex-row flex-col justify-between container">
       <div class="font-bold text-2xl flex flex-row justify-between">
         <div>
           <span class="text-blue-600">Daniel</span>
@@ -13,7 +13,7 @@
               height="24px"
               viewBox="0 0 24 24"
               width="24px"
-              fill="#000000"
+              fill="#FFFFFF"
             >
               <path d="M0 0h24v24H0V0z" fill="none" />
               <path d="M2 16v2h20v-2H2zm0-5v2h20v-2H2zm0-5v2h20V6H2z" />
@@ -25,7 +25,7 @@
               height="24px"
               viewBox="0 0 24 24"
               width="24px"
-              fill="#000000"
+              fill="#FFFFFF"
             >
               <path d="M0 0h24v24H0V0z" fill="none" />
               <path
@@ -35,20 +35,21 @@
           </button>
         </div>
       </div>
-      <div class="sm:px-12 sm:m-auto py-3 w-full" :class="{ hidden: isActive }">
+      <div class="sm:px-12 sm:m-auto sm:py-0 py-3 w-full" :class="{ hidden: isActive }">
         <Link to="/shop" name="درباره ما" />
         <Link to="/about" name="اطلاعات" />
         <Link to="/login" name="لاگین" />
       </div>
-      <div :class="{ hidden: isActive }">
+       <div :class="{ hidden: isActive }">
         <form action="">
           <input
             type="text"
             placeholder="جستجو کنید .."
-            class="rounded-lg text-sm px-4 py-2 m-auto border focus:border-blue-600 container"
+            class="rounded-lg text-sm px-4 py-2 m-auto border focus:border-red-800 container"
+            ref="search"
           />
         </form>
-      </div>
+      </div> 
     </div>
   </nav>
 </template>
@@ -68,6 +69,9 @@ export default {
     toggle() {
       this.isActive = this.isActive ? false : true;
     },
+  },
+  mounted() {
+    this.$refs.search.focus();
   },
 };
 </script>
