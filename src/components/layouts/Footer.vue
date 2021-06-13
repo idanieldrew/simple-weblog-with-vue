@@ -1,7 +1,5 @@
 <template>
-  <div>
-        فوتر
-  </div>
+  <div></div>
 </template>
 
 <script>
