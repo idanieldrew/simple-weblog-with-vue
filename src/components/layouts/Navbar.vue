@@ -1,5 +1,8 @@
 <template>
-  <nav id="navbar" class="w-full bg-transparent sm:px-6 px-4 py-2 sm:py-4 shadow z-20 fixed">
+  <nav
+    id="nav"
+    class="w-full bg-transparent sm:px-6 px-4 py-2 sm:py-4 shadow z-20 fixed"
+  >
     <div class="flex sm:flex-row flex-col justify-between container">
       <div class="font-bold text-2xl flex flex-row justify-between">
         <div>
@@ -7,7 +10,7 @@
           <span class="text-red-600">Drew</span>
         </div>
         <div class="sm:hidden">
-          <button @click="toggle" v-show="isActive" >
+          <button @click="toggle" v-show="isActive">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="24px"
@@ -35,21 +38,35 @@
           </button>
         </div>
       </div>
-      <div class="sm:px-12 sm:m-auto sm:py-0 py-3 w-full" :class="{ hidden: isActive }">
-        <Link to="/shop" name="درباره ما" />
-        <Link to="/about" name="اطلاعات" />
-        <Link to="/login" name="لاگین" />
+      <div
+        class="sm:px-12 sm:m-auto sm:py-0 py-3 w-full"
+        :class="{ hidden: isActive }"
+      >
+        <Link to="/" name="صفحه اصلی" />
+        <Link to="/about" name="درباره ما" />
+        <Link to="/information" name="اطلاعات" />
+        <Link to="/contact" name="ارتباط با ما" />
       </div>
-       <div :class="{ hidden: isActive }">
+      <div :class="{ hidden: isActive }">
         <form action="">
           <input
             type="text"
             placeholder="جستجو کنید .."
-            class="rounded-lg text-sm px-4 py-2 m-auto border focus:border-red-800 container"
+            class="
+              rounded-lg
+              text-sm
+              px-4
+              py-2
+              m-auto
+              border
+              focus:border-red-800
+              container
+              outline-none
+            "
             ref="search"
           />
         </form>
-      </div> 
+      </div>
     </div>
   </nav>
 </template>

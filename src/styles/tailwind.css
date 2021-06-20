@@ -3,3 +3,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+#nav .router-link-active {
+    @apply border-red-500;
+}
+
+@screen sm {
+    #nav .router-link-active {
+        @apply border-b-2 border-red-500;
+    }
+}
