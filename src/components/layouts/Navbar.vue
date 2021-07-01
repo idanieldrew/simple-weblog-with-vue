@@ -43,8 +43,8 @@
         :class="{ hidden: isActive }"
       >
         <Link to="/" name="صفحه اصلی" />
+        <Link to="/articles" name="مقالات" />
         <Link to="/about" name="درباره ما" />
-        <Link to="/information" name="اطلاعات" />
         <Link to="/contact" name="ارتباط با ما" />
       </div>
       <div :class="{ hidden: isActive }">
@@ -61,7 +61,7 @@
               border
               focus:border-red-800
               container
-              outline-none
+              outline-none bg-gray-300
             "
             ref="search"
           />

@@ -9,7 +9,10 @@
     <div class="absolute inset-0 bg-gray-500 opacity-50"></div>
 
     <div
-      class=" mt-2 mx-6
+      class="
+        mt-8
+        px-6
+        sm:mt-2
         text-sm
         absolute
         inset-0
@@ -23,7 +26,7 @@
     >
       <div class="text-sm">خوش امدید به سایت</div>
       <div class="font-bold text-3xl my-1.5 animate-pulse">DanielDrew</div>
-      <div class="text-sm sm:w-1/2 w-full">
+      <div class="text-sm sm:w-1/2 w-full text-right">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem
         ullam nihil harum? Quos corrupti nihil maxime in? Qui reiciendis
         eligendi perspiciatis, beatae quia deserunt, impedit officia accusamus
